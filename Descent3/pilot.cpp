@@ -696,6 +696,11 @@ void PilotShutdown() {
   Current_pilot.clean(false);
 }
 
+void PilotEarlyInit()
+{
+  Current_pilot.initialize();
+}
+
 void PilotInit() {
   PilotInitData(&Current_pilot);
   atexit(PilotShutdown);
